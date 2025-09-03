@@ -77,8 +77,8 @@ const Courses = () => {
   ];
 
   const sectionVariants: Variants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
   };
 
   const cardContainerVariants: Variants = {
@@ -91,12 +91,12 @@ const Courses = () => {
   };
 
   const cardVariants: Variants = {
-    hidden: { y: 20, opacity: 0 },
+    hidden: { y: 15, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.4,
         ease: "easeOut",
       },
     },
@@ -109,7 +109,7 @@ const Courses = () => {
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.05 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
@@ -138,7 +138,7 @@ const Courses = () => {
             variants={cardContainerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             {accreditedCourses.map((course, index) => (
               <motion.div 
@@ -206,7 +206,7 @@ const Courses = () => {
             variants={cardContainerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             {nonAccreditedCourses.map((course, index) => (
               <motion.div 

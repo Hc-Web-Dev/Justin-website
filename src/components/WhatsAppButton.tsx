@@ -9,7 +9,7 @@ const WhatsAppButton = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-lg z-50 flex items-center justify-center"
+      className="fixed bottom-4 sm:bottom-8 right-4 sm:right-8 bg-green-500 text-white p-3 sm:p-4 rounded-full shadow-lg z-50 flex items-center justify-center touch-target"
       whileHover={{ scale: 1.1, boxShadow: "0px 10px 20px -5px rgba(34, 197, 94, 0.4)" }}
       whileTap={{ scale: 0.95 }}
       aria-label="Chat on WhatsApp"
@@ -19,8 +19,9 @@ const WhatsAppButton = () => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
+        width="24"
+        height="24"
+        className="sm:w-7 sm:h-7"
         viewBox="0 0 24 24"
         fill="currentColor"
       >
