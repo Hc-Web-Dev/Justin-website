@@ -125,8 +125,8 @@ const About = () => {
             transition={{ duration: 0.6 }}
           >
             <img
-              src="https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Professional healthcare training classroom with students learning medical skills at Mitchellsplain Skills & Training Academy"
+              src="https://images.pexels.com/photos/8376298/pexels-photo-8376298.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Professional healthcare training instructor teaching medical students practical skills at Mitchellsplain Skills & Training Academy in Cape Town"
               className="w-full h-96 object-cover rounded-2xl shadow-xl"
               loading="lazy"
               itemProp="image"
@@ -135,12 +135,10 @@ const About = () => {
           </motion.div>
         </div>
 
-        <section
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-          aria-labelledby="features-heading"
-        >
+        <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-8" aria-labelledby="features-heading">
           <h3 id="features-heading" className="sr-only">Our Key Features</h3>
           <motion.div
+            className="col-span-full grid md:grid-cols-2 lg:grid-cols-4 gap-8"
             variants={cardContainerVariants}
             initial="hidden"
             whileInView="visible"
