@@ -120,11 +120,23 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
             <div className="text-gray-400 text-xs sm:text-sm mb-4 md:mb-0">
-              © 2024 Mitchellsplain Skills & Training Academy. All rights reserved.
+              © 2025 Mitchellsplain Skills & Training Academy. All rights reserved.
             </div>
-            <div className="text-gray-400 text-xs sm:text-sm">
+            <div className="text-gray-400 text-xs sm:text-sm mb-4 md:mb-0">
               Accreditation No: QCTO-07 QCTO/SDP 13062314529
             </div>
+          </div>
+          <div className="flex justify-center mt-4">
+            <motion.a
+              href="https://hcweb.co.za/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-teal-400 text-xs sm:text-sm transition-colors duration-200"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Made by HC WEB
+            </motion.a>
           </div>
         </div>
       </div>
