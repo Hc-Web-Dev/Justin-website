@@ -103,24 +103,34 @@ const Courses = () => {
   };
 
   return (
-    <motion.section 
-      id="courses" 
+    <motion.section
+      id="courses"
       className="py-12 sm:py-20 bg-gradient-to-br from-gray-50 to-white overflow-hidden"
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.05 }}
+      aria-labelledby="courses-heading"
+      itemScope
+      itemType="https://schema.org/ItemList"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        <header className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2
+            id="courses-heading"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4"
+            itemProp="name"
+          >
             Our Training Programs
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Choose from our comprehensive range of accredited and non-accredited courses 
+          <p
+            className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto"
+            itemProp="description"
+          >
+            Choose from our comprehensive range of accredited and non-accredited courses
             designed to advance your healthcare career.
           </p>
-        </div>
+        </header>
 
         {/* Accredited Courses */}
         <div className="mb-20">
@@ -141,11 +151,14 @@ const Courses = () => {
             viewport={{ once: true, amount: 0.1 }}
           >
             {accreditedCourses.map((course, index) => (
-              <motion.div 
-                key={index} 
+              <motion.article
+                key={index}
                 className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden flex flex-col"
                 variants={cardVariants}
                 whileHover={{ y: -8, boxShadow: "0px 20px 40px -15px rgba(0, 128, 128, 0.2)" }}
+                itemScope
+                itemType="https://schema.org/Course"
+                itemProp="itemListElement"
               >
                 <div className="bg-gradient-to-r from-teal-600 to-blue-600 p-6 text-white">
                   <div className="flex items-center justify-between mb-4">
@@ -154,12 +167,22 @@ const Courses = () => {
                     </span>
                     <Award className="h-6 w-6" />
                   </div>
-                  <h4 className="text-2xl font-bold mb-2">{course.title}</h4>
+                  <h4
+                    className="text-2xl font-bold mb-2"
+                    itemProp="name"
+                  >
+                    {course.title}
+                  </h4>
                 </div>
                 
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="flex-grow">
-                    <p className="text-gray-600 mb-6 leading-relaxed">{course.description}</p>
+                    <p
+                      className="text-gray-600 mb-6 leading-relaxed"
+                      itemProp="description"
+                    >
+                      {course.description}
+                    </p>
                     
                     <div className="space-y-3 mb-6">
                       {course.features.map((feature, featureIndex) => (
@@ -179,9 +202,9 @@ const Courses = () => {
                     Learn More
                   </motion.button>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
+                              </motion.article>
+              ))}
+            </motion.div>
         </div>
 
         {/* Non-Accredited Courses */}
@@ -203,18 +226,31 @@ const Courses = () => {
             viewport={{ once: true, amount: 0.1 }}
           >
             {nonAccreditedCourses.map((course, index) => (
-              <motion.div 
-                key={index} 
+              <motion.article
+                key={index}
                 className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
                 variants={cardVariants}
                 whileHover={{ y: -8, boxShadow: "0px 20px 40px -15px rgba(59, 130, 246, 0.2)" }}
+                itemScope
+                itemType="https://schema.org/Course"
+                itemProp="itemListElement"
               >
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white">
-                  <h4 className="text-2xl font-bold mb-2">{course.title}</h4>
+                  <h4
+                    className="text-2xl font-bold mb-2"
+                    itemProp="name"
+                  >
+                    {course.title}
+                  </h4>
                 </div>
                 
                 <div className="p-6">
-                  <p className="text-gray-600 mb-6 leading-relaxed">{course.description}</p>
+                  <p
+                    className="text-gray-600 mb-6 leading-relaxed"
+                    itemProp="description"
+                  >
+                    {course.description}
+                  </p>
                   
                   <div className="space-y-3 mb-6">
                     {course.features.map((feature, featureIndex) => (
@@ -233,9 +269,9 @@ const Courses = () => {
                     Learn More
                   </motion.button>
                 </div>
-              </motion.div>
-            ))}
-          </motion.div>
+                              </motion.article>
+              ))}
+            </motion.div>
         </div>
       </div>
     </motion.section>

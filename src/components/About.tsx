@@ -52,53 +52,70 @@ const About = () => {
   };
 
   return (
-    <motion.section 
-      id="about" 
+    <motion.section
+      id="about"
       className="py-20 bg-white"
       variants={sectionVariants}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
+      aria-labelledby="about-heading"
+      itemScope
+      itemType="https://schema.org/AboutPage"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        <header className="text-center mb-12 md:mb-16">
+          <h2
+            id="about-heading"
+            className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4"
+            itemProp="name"
+          >
             About Our Academy
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-            Mitchellsplain Skills and Training Academy, in joint venture with MMokeng Careers Training Institute, 
+          <p
+            className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto"
+            itemProp="description"
+          >
+            Mitchellsplain Skills and Training Academy, in joint venture with MMokeng Careers Training Institute,
             provides world-class healthcare training to empower your professional journey.
           </p>
-        </div>
+        </header>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-          <motion.div 
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-16" role="main">
+          <motion.article
             className="space-y-6"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
+            itemScope
+            itemType="https://schema.org/Article"
           >
-            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
+            <h3
+              className="text-2xl sm:text-3xl font-bold text-gray-900"
+              itemProp="headline"
+            >
               Empowering Healthcare Professionals Since 2014
             </h3>
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
-              Our academy is committed to providing high-quality education and training in the healthcare sector. 
-              We combine theoretical knowledge with practical hands-on experience to ensure our graduates are 
-              job-ready and confident in their chosen field.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              With our QCTO accreditation and partnership with MMokeng Careers Training Institute, we offer 
-              both accredited and non-accredited programs designed to meet industry demands and create 
-              pathways to meaningful careers in healthcare.
-            </p>
-            <div className="bg-teal-50 border-l-4 border-teal-600 p-6 rounded-lg">
-              <p className="text-teal-800 font-medium">
-                "Our mission is to bridge the gap between education and employment by providing practical, 
-                industry-relevant training that transforms lives and communities."
+            <div itemProp="articleBody">
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+                Our academy is committed to providing high-quality education and training in the healthcare sector.
+                We combine theoretical knowledge with practical hands-on experience to ensure our graduates are
+                job-ready and confident in their chosen field.
+              </p>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                With our QCTO accreditation and partnership with MMokeng Careers Training Institute, we offer
+                both accredited and non-accredited programs designed to meet industry demands and create
+                pathways to meaningful careers in healthcare.
               </p>
             </div>
-          </motion.div>
+            <blockquote className="bg-teal-50 border-l-4 border-teal-600 p-6 rounded-lg">
+              <p className="text-teal-800 font-medium italic">
+                "Our mission is to bridge the gap between education and employment by providing practical,
+                industry-relevant training that transforms lives and communities."
+              </p>
+            </blockquote>
+          </motion.article>
           
           <motion.div 
             className="relative"
@@ -109,35 +126,57 @@ const About = () => {
           >
             <img
               src="https://images.pexels.com/photos/5452201/pexels-photo-5452201.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt="Healthcare training classroom"
+              alt="Professional healthcare training classroom with students learning medical skills at Mitchellsplain Skills & Training Academy"
               className="w-full h-96 object-cover rounded-2xl shadow-xl"
+              loading="lazy"
+              itemProp="image"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-teal-600/20 to-blue-600/20 rounded-2xl"></div>
           </motion.div>
         </div>
 
-        <motion.div 
+        <section
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-          variants={cardContainerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
+          aria-labelledby="features-heading"
         >
-          {features.map((feature, index) => (
-            <motion.div 
-              key={index}
-              className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-sm border border-gray-100"
-              variants={cardVariants}
-              whileHover={{ y: -8, boxShadow: "0px 15px 30px -10px rgba(0, 0, 0, 0.1)" }}
-            >
-              <div className="bg-teal-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <feature.icon className="h-8 w-8 text-teal-600" />
-              </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h4>
-              <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-            </motion.div>
-          ))}
-        </motion.div>
+          <h3 id="features-heading" className="sr-only">Our Key Features</h3>
+          <motion.div
+            variants={cardContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            {features.map((feature, index) => (
+              <motion.article
+                key={index}
+                className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-sm border border-gray-100"
+                variants={cardVariants}
+                whileHover={{ y: -8, boxShadow: "0px 15px 30px -10px rgba(0, 0, 0, 0.1)" }}
+                itemScope
+                itemType="https://schema.org/Service"
+              >
+                <div
+                  className="bg-teal-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6"
+                  aria-hidden="true"
+                >
+                  <feature.icon className="h-8 w-8 text-teal-600" />
+                </div>
+                <h4
+                  className="text-xl font-semibold text-gray-900 mb-4"
+                  itemProp="name"
+                >
+                  {feature.title}
+                </h4>
+                <p
+                  className="text-gray-600 leading-relaxed"
+                  itemProp="description"
+                >
+                  {feature.description}
+                </p>
+              </motion.article>
+            ))}
+          </motion.div>
+        </section>
       </div>
     </motion.section>
   );
