@@ -1,5 +1,5 @@
 import { motion, Variants } from 'framer-motion';
-import { CheckCircle, Clock, Award, BookOpen } from 'lucide-react';
+import { CheckCircle, Award, BookOpen } from 'lucide-react';
 
 const Courses = () => {
   const accreditedCourses = [
@@ -155,12 +155,6 @@ const Courses = () => {
                     <Award className="h-6 w-6" />
                   </div>
                   <h4 className="text-2xl font-bold mb-2">{course.title}</h4>
-                  <div className="flex items-center text-sm opacity-90">
-                    <div className="flex items-center space-x-1">
-                      <Clock className="h-4 w-4" />
-                      <span>{course.duration}</span>
-                    </div>
-                  </div>
                 </div>
                 
                 <div className="p-6 flex flex-col flex-grow">
@@ -217,12 +211,6 @@ const Courses = () => {
               >
                 <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white">
                   <h4 className="text-2xl font-bold mb-2">{course.title}</h4>
-                  <div className="flex items-center text-sm opacity-90">
-                    <div className="flex items-center space-x-1">
-                      <Clock className="h-4 w-4" />
-                      <span>{course.duration}</span>
-                    </div>
-                  </div>
                 </div>
                 
                 <div className="p-6">
