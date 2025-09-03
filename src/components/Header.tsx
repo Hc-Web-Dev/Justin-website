@@ -25,7 +25,7 @@ const Header = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-2">
+        <div className="flex justify-between items-center py-1">
           <div className="flex items-center">
             <img src="/logo.svg" alt="Mitchellsplain Skills & Training Academy Logo" className="h-20 w-auto" />
           </div>
@@ -77,7 +77,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200 bg-white/95 backdrop-blur-sm rounded-b-lg">
+          <div className="md:hidden py-3 border-t border-gray-200 bg-white/95 backdrop-blur-sm rounded-b-lg">
             <div className="flex flex-col space-y-4 px-4">
               <button 
                 onClick={() => scrollToSection('home')}
