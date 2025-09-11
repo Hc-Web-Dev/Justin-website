@@ -194,7 +194,8 @@ const Courses = () => {
                     </div>
                   </div>
                   
-                  <motion.button 
+                  <motion.button
+                    onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
                     className="w-full bg-teal-600 text-white py-3 rounded-lg font-semibold mt-auto"
                     whileHover={{ scale: 1.05, backgroundColor: "#0d9488" }}
                     whileTap={{ scale: 0.95 }}
@@ -261,7 +262,8 @@ const Courses = () => {
                     ))}
                   </div>
                   
-                  <motion.button 
+                  <motion.button
+                    onClick={() => document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'center' })}
                     className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold"
                     whileHover={{ scale: 1.05, backgroundColor: "#2563eb" }}
                     whileTap={{ scale: 0.95 }}

@@ -1,11 +1,11 @@
 import { motion, Variants } from 'framer-motion';
-import { Calendar } from 'lucide-react';
+import { Building2 } from 'lucide-react';
 
 const Hero = () => {
   const scrollToContact = () => {
-    const element = document.getElementById('contact');
+    const element = document.getElementById('contact-form');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   };
 
@@ -60,12 +60,12 @@ const Hero = () => {
         <div className="space-y-8">
             <motion.div className="space-y-4" variants={itemVariants}>
               <div
-                className="inline-flex items-center space-x-2 bg-teal-500/20 text-teal-300 px-4 py-2 rounded-full text-sm font-medium border border-teal-500/30"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500/20 to-teal-500/20 text-orange-300 px-6 py-3 rounded-full text-sm font-bold border border-orange-500/30 shadow-lg"
                 role="status"
-                aria-label="Enrollment announcement"
+                aria-label="Opening announcement"
               >
-                <Calendar className="h-4 w-4" aria-hidden="true" />
-                <span>Enrollment Opens October 1st</span>
+                <Building2 className="h-5 w-5" aria-hidden="true" />
+                <span>Opening Soon in Cape Town City Centre</span>
               </div>
               <motion.h1
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
@@ -74,14 +74,16 @@ const Hero = () => {
               >
                 Your Future in
                 <span className="text-teal-400 block">Healthcare Training</span>
+                <span className="text-orange-400 block text-2xl sm:text-3xl lg:text-4xl font-semibold mt-2">Cape Town City Centre Campus</span>
               </motion.h1>
               <motion.p
                 className="text-lg sm:text-xl text-gray-300 leading-relaxed"
                 variants={itemVariants}
                 itemProp="description"
               >
-                Transform your career with accredited healthcare courses at Mitchellsplain Skills
-                and Training Academy. Professional training that opens doors to meaningful opportunities.
+                Join us at our brand new campus in Cape Town City Centre! Transform your career with
+                accredited healthcare courses at Mitchellsplain Skills and Training Academy.
+                Professional training in the heart of the city that opens doors to meaningful opportunities.
               </motion.p>
             </motion.div>
 

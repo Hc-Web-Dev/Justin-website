@@ -104,10 +104,9 @@ const Footer = () => {
               <li className="flex items-start space-x-3 text-gray-300">
                 <MapPin className="h-5 w-5 mt-1 text-teal-400 flex-shrink-0" />
                 <span className="text-sm sm:text-base leading-relaxed">
-                  Entrance 1, Second Floor<br />
-                  Netclinic Ndabeni<br />
-                  55 Morningside St<br />
-                  Cape Town, 7405
+                  Opening Soon in<br />
+                  <span className="text-teal-300 font-semibold">Cape Town City Center</span><br />
+                  <span className="text-orange-300 text-xs">New Campus Location</span>
                 </span>
               </li>
             </ul>

@@ -50,14 +50,14 @@ const Header = () => {
             >
               Courses
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')}
+            <button
+              onClick={() => scrollToSection('contact-form')}
               className="text-gray-700 hover:text-teal-600 font-medium transition-colors"
             >
               Contact
             </button>
-            <motion.button 
-              onClick={() => scrollToSection('contact')}
+            <motion.button
+              onClick={() => scrollToSection('contact-form')}
               className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg font-medium"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -97,14 +97,14 @@ const Header = () => {
               >
                 Courses
               </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
+              <button
+                onClick={() => scrollToSection('contact-form')}
                 className="text-gray-700 hover:text-teal-600 font-medium text-left"
               >
                 Contact
               </button>
-              <motion.button 
-                onClick={() => scrollToSection('contact')}
+              <motion.button
+                onClick={() => scrollToSection('contact-form')}
                 className="bg-teal-600 hover:bg-teal-700 text-white px-6 py-2 rounded-lg font-medium text-center"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
