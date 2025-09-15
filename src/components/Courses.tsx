@@ -20,7 +20,7 @@ const Courses = () => {
     {
       title: "Health Promotion Officer",
       level: "Level 3",
-      duration: "6 months",
+      duration: "12 months",
       students: "30+ enrolled",
       description: "Learn to promote health awareness, conduct health education programs, and support community wellness initiatives.",
       features: [
@@ -34,7 +34,7 @@ const Courses = () => {
     {
       title: "Home-Based Personal Care Worker",
       level: "Level 3",
-      duration: "6 months",
+      duration: "12 months",
       students: "40+ enrolled",
       description: "Training in providing personal care services in home settings, focusing on elderly and disabled care.",
       features: [
@@ -50,7 +50,7 @@ const Courses = () => {
   const nonAccreditedCourses = [
     {
       title: "HIV Counseling & Testing",
-      duration: "3 months",
+      duration: "12 months",
       students: "25+ enrolled",
       description: "Specialized training in HIV counseling, testing procedures, and support services for affected individuals.",
       features: [
@@ -63,7 +63,7 @@ const Courses = () => {
     },
     {
       title: "Care Worker's Course",
-      duration: "4 months",
+      duration: "12 months",
       students: "35+ enrolled",
       description: "Essential skills for care workers including basic healthcare, patient interaction, and care planning.",
       features: [
@@ -173,6 +173,9 @@ const Courses = () => {
                   >
                     {course.title}
                   </h4>
+                  <p className="text-sm font-medium opacity-90">
+                    Duration: 12 months
+                  </p>
                 </div>
                 
                 <div className="p-6 flex flex-col flex-grow">
@@ -243,6 +246,9 @@ const Courses = () => {
                   >
                     {course.title}
                   </h4>
+                  <p className="text-sm font-medium opacity-90">
+                    Duration: 12 months
+                  </p>
                 </div>
                 
                 <div className="p-6">
