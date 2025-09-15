@@ -15,107 +15,151 @@ const Hero = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.2,
+        delayChildren: 0.3,
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { y: 15, opacity: 0 },
+    hidden: { y: 30, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.4,
+        duration: 0.6,
+        ease: [0.16, 1, 0.3, 1],
+      },
+    },
+  };
+
+  const tagVariants: Variants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        delay: 0.7,
+        duration: 0.5,
         ease: "easeOut",
       },
     },
   };
 
-
+  const buttonVariants: Variants = {
+    hover: { scale: 1.05, transition: { duration: 0.2 } },
+    tap: { scale: 0.97 },
+  };
 
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center text-white pt-24 pb-16 sm:pt-20 sm:pb-20"
+      className="relative min-h-screen flex items-center justify-center text-white pt-24 pb-16 sm:pt-32 sm:pb-24 overflow-hidden"
       role="banner"
-      aria-label="Hero section with healthcare training information"
+      aria-label="Hero section: Launching healthcare training in Cape Town City Centre"
     >
-      {/* Background Image */}
+      {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-top bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg')"
+          backgroundImage: "url('https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg?auto=compress&cs=tinysrgb&w=1920')",
         }}
         role="img"
-        aria-label="Healthcare training classroom background"
+        aria-label="Modern healthcare classroom with students and instructors"
       ></div>
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
-      <motion.div 
-        className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center"
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/70 to-black/90" aria-hidden="true"></div>
+
+      {/* Main Content */}
+      <motion.div
+        className="max-w-5xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10 text-center"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-        <div className="space-y-8">
-            <motion.div className="space-y-4" variants={itemVariants}>
-              <div
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500/20 to-teal-500/20 text-orange-300 px-6 py-3 rounded-full text-sm font-bold border border-orange-500/30 shadow-lg"
-                role="status"
-                aria-label="Opening announcement"
-              >
-                <Building2 className="h-5 w-5" aria-hidden="true" />
-                <span>Opening Soon in Cape Town City Centre</span>
-              </div>
-              <motion.h1
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-                variants={itemVariants}
-                itemProp="name"
-              >
-                Your Future in
-                <span className="text-teal-400 block">Healthcare Training</span>
-                <span className="text-orange-400 block text-2xl sm:text-3xl lg:text-4xl font-semibold mt-2">Cape Town City Centre Campus</span>
-              </motion.h1>
-              <motion.p
-                className="text-lg sm:text-xl text-gray-300 leading-relaxed"
-                variants={itemVariants}
-                itemProp="description"
-              >
-                Join us at our brand new campus in Cape Town City Centre! Transform your career with
-                accredited healthcare courses at Mitchellsplain Skills and Training Academy.
-                Professional training in the heart of the city that opens doors to meaningful opportunities.
-              </motion.p>
-            </motion.div>
-
-
-
-            <motion.nav
-              className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 pt-4"
-              variants={itemVariants}
-              role="navigation"
-              aria-label="Primary actions"
+        <div className="space-y-8 flex flex-col items-center">
+          {/* Headline with Integrated Tag */}
+          <motion.div variants={itemVariants} className="space-y-4 relative">
+            <h1
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight"
+              itemProp="name"
             >
-              <motion.button
-                onClick={scrollToContact}
-                className="bg-teal-500 text-white px-10 py-4 rounded-xl font-semibold text-lg shadow-xl focus:outline-none focus:ring-2 focus:ring-teal-300 focus:ring-offset-2 focus:ring-offset-black"
-                whileHover={{ scale: 1.05, boxShadow: "0px 10px 30px -5px rgba(0, 128, 128, 0.4)" }}
-                whileTap={{ scale: 0.95 }}
-                aria-label="Enroll in healthcare training courses"
-              >
-                Enroll Today
-              </motion.button>
-              <motion.button
-                onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-2 border-teal-500 text-teal-400 px-10 py-4 rounded-xl font-semibold text-lg shadow-lg focus:outline-none focus:ring-2 focus:ring-teal-300 focus:ring-offset-2 focus:ring-offset-black"
-                whileHover={{ scale: 1.05, backgroundColor: "#14b8a6", color: "#ffffff", boxShadow: "0px 10px 30px -5px rgba(20, 184, 166, 0.4)" }}
-                whileTap={{ scale: 0.95 }}
-                aria-label="View available healthcare training courses"
-              >
-                View Courses
-              </motion.button>
-            </motion.nav>
+              Your Future in
+              <span className="text-teal-400 block mt-2 sm:mt-3">Healthcare Training</span>
+              <span className="block mt-4 sm:mt-6 relative">
+                <span className="text-orange-400 text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide">
+                  Cape Town City Centre Campus
+                </span>
+
+                {/* Integrated Floating Tag — Positioned to the right of campus name */}
+                <motion.div
+                  variants={tagVariants}
+                  className="absolute -top-2 -right-4 sm:-right-6 md:-right-8 bg-gradient-to-r from-orange-500/90 to-orange-600/90 text-white text-xs sm:text-sm font-bold px-3 py-1.5 rounded-full flex items-center space-x-1.5 shadow-lg border border-orange-400/30 backdrop-blur-sm animate-fade-in"
+                  aria-label="Campus opening soon"
+                >
+                  <Building2 className="h-3.5 w-3.5" aria-hidden="true" />
+                  <span className="whitespace-nowrap">Opening Soon</span>
+                </motion.div>
+              </span>
+            </h1>
+          </motion.div>
+
+          {/* Description */}
+          <motion.p
+            variants={itemVariants}
+            className="text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-4xl mx-auto px-2"
+            itemProp="description"
+          >
+            Join us at our brand-new campus in the heart of Cape Town. Transform your career with
+            <span className="font-medium text-white"> accredited, industry-aligned healthcare courses </span>
+            from Mitchellsplain Skills and Training Academy — where professional training meets real-world opportunity.
+          </motion.p>
+
+          {/* CTA Buttons */}
+          <motion.nav
+            className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-8"
+            variants={itemVariants}
+            role="navigation"
+            aria-label="Primary call-to-action buttons"
+          >
+            <motion.button
+              onClick={scrollToContact}
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+              className="bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white px-8 sm:px-12 py-4 rounded-xl font-semibold text-lg sm:text-xl shadow-xl focus:outline-none focus:ring-4 focus:ring-teal-300/50 focus:ring-offset-2 focus:ring-offset-black transition-all duration-300"
+              aria-label="Enroll in healthcare training courses today"
+            >
+              Enroll Today
+            </motion.button>
+
+            <motion.button
+              onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}
+              variants={buttonVariants}
+              whileHover="hover"
+              whileTap="tap"
+              className="border-2 border-teal-500 text-teal-300 hover:bg-teal-500 hover:text-white px-8 sm:px-12 py-4 rounded-xl font-semibold text-lg sm:text-xl shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-teal-300/50 focus:ring-offset-2 focus:ring-offset-black transition-all duration-300"
+              aria-label="View available healthcare training courses"
+            >
+              View Courses
+            </motion.button>
+          </motion.nav>
         </div>
       </motion.div>
+
+      {/* Optional Scroll Hint */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          transition={{ delay: 1.2 }}
+          className="text-gray-300 text-sm"
+          aria-hidden="true"
+        >
+          ↓ Scroll to explore
+        </motion.div>
+      </div>
     </section>
   );
 };
