@@ -3,7 +3,7 @@ import { Building2 } from 'lucide-react';
 
 const Hero = () => {
   const scrollToContact = () => {
-    document.getElementById('contact-form')?.scrollIntoView({
+    document.getElementById('contact')?.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     });
