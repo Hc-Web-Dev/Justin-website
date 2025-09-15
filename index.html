@@ -354,6 +354,22 @@
   </head>
   <body>
     <div id="root"></div>
+    
+    <!-- Hidden form for Netlify Forms detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="course">
+        <option value="Social Auxiliary Work (Level 5)">Social Auxiliary Work (Level 5)</option>
+        <option value="Health Promotion Officer (Level 3)">Health Promotion Officer (Level 3)</option>
+        <option value="Home-Based Personal Care Worker (Level 3)">Home-Based Personal Care Worker (Level 3)</option>
+        <option value="HIV Counseling & Testing">HIV Counseling & Testing</option>
+        <option value="Care Worker's Course">Care Worker's Course</option>
+      </select>
+      <textarea name="message"></textarea>
+    </form>
+    
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

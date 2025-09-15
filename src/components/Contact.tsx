@@ -85,24 +85,10 @@ const Contact = () => {
                     <p className="font-semibold text-gray-900 text-sm sm:text-base">Location</p>
                     <p className="text-orange-600 font-medium text-xs sm:text-sm leading-relaxed">
                       Opening Soon in Cape Town City Center<br />
-                      <span className="text-orange-500 font-semibold">New Campus Location</span>
                     </p>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-3 p-3 sm:p-4 bg-green-50 rounded-xl">
-                  <div className="bg-green-600 p-2 sm:p-3 rounded-lg flex-shrink-0">
-                    <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
-                  </div>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-semibold text-gray-900 text-sm sm:text-base">Office Hours</p>
-                    <p className="text-green-600 font-medium text-xs sm:text-sm leading-relaxed">
-                      Monday - Friday: 8:00 AM - 5:00 PM<br />
-                      Saturday: 9:00 AM - 2:00 PM<br />
-                      Sunday: Closed
-                    </p>
-                  </div>
-                </div>
               </div>
             </div>
 
