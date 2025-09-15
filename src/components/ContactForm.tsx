@@ -163,7 +163,7 @@ const ContactForm = () => {
       transition={{ duration: 0.6 }}
       className="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100"
     >
-      <div className="mb-8 text-center">
+      <div id="form-heading" className="mb-8 text-center">
         <h3 className="text-3xl font-bold text-gray-900 mb-3">Get Started Today</h3>
         <p className="text-gray-600 text-lg leading-relaxed">
           Fill out the form below and we'll contact you with more information about our courses.
