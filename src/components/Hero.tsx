@@ -5,7 +5,6 @@ const Hero = () => {
   const scrollToContact = () => {
     document.getElementById('contact')?.scrollIntoView({
       behavior: 'smooth',
-      block: 'start',
     });
   };
 
