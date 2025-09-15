@@ -62,9 +62,7 @@ const ContactForm = () => {
       newErrors.course = 'Please select a course';
     }
 
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    }
+    // Message is optional, no validation needed
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -281,7 +279,7 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-            Message *
+            Message (Optional)
           </label>
           <textarea
             id="message"
@@ -292,8 +290,7 @@ const ContactForm = () => {
             className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent transition-colors resize-vertical ${
               errors.message ? 'border-red-300' : 'border-gray-300'
             }`}
-            placeholder="Tell us about your goals and any questions you have..."
-            required
+            placeholder="Tell us about your goals and any questions you have... (Optional)"
           />
           {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
         </div>
