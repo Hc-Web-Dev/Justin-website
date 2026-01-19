@@ -1,0 +1,41 @@
+{
+  "name": "Mitchellsplain Skills & Training Academy - Professional Healthcare Training",
+  "short_name": "Mitchellsplain Academy",
+  "description": "Transform your career with accredited healthcare courses in Cape Town. QCTO accredited programs in Social Auxiliary Work, Health Promotion, and Personal Care Worker training.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#14b8a6",
+  "orientation": "portrait-primary",
+  "categories": ["education", "healthcare", "training"],
+  "lang": "en-ZA",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ]
+}
