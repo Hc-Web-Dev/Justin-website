@@ -74,10 +74,10 @@
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-    [
       {
         "@context": "https://schema.org",
         "@type": ["EducationalOrganization", "LocalBusiness"],
+        "@id": "https://mitchellsplainskills.co.za/#localbusiness",
         "name": "Mitchellsplain Skills & Training Academy",
         "alternateName": ["Mitchellsplain Academy", "MSTLSA"],
         "description": "Professional healthcare training academy offering QCTO accredited courses in Cape Town, South Africa. Located in Ndabeni, near Mitchells Plain and surrounding areas.",
@@ -88,7 +88,6 @@
         "priceRange": "$$",
         "paymentAccepted": ["Cash", "Bank Transfer", "EFT"],
         "currenciesAccepted": "ZAR",
-
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Entrance 1, Second Floor, Netclinic Ndabeni, Sunrise Building, 55 Morningside St",
@@ -97,18 +96,15 @@
           "postalCode": "7405",
           "addressCountry": "ZA"
         },
-
         "geo": {
           "@type": "GeoCoordinates",
           "latitude": "-33.9249",
           "longitude": "18.4951"
         },
-
         "openingHours": [
           "Mo-Fr 08:00-17:00",
           "Sa 09:00-14:00"
         ],
-
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+27-76-156-4909",
@@ -157,12 +153,10 @@
             }
           ]
         },
-
         "sameAs": [
           "https://wa.me/27761564909",
           "https://www.google.com/maps?q=Mitchellsplain+Skills+and+Training+Academy"
         ],
-
         "areaServed": [
           {
             "@type": "City",
@@ -195,145 +189,46 @@
             "sameAs": "https://en.wikipedia.org/wiki/South_Africa"
           }
         ],
-
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Healthcare Training Courses",
           "description": "QCTO accredited healthcare training programs in Cape Town",
           "itemListElement": [
-          {
-            "@type": "Course",
-            "name": "Social Auxiliary Work",
-            "description": "Comprehensive training in social work principles, community development, and client support services",
-            "provider": {
-              "@type": "EducationalOrganization",
-              "name": "Mitchellsplain Skills & Training Academy"
-            },
-            "educationalLevel": "Level 5",
-            "timeRequired": "PT720H",
-            "inLanguage": "en"
-          },
-          {
-            "@type": "Course",
-            "name": "Health Promotion Officer",
-            "description": "Training in health education, community health programs, and disease prevention",
-            "provider": {
-              "@type": "EducationalOrganization",
-              "name": "Mitchellsplain Skills & Training Academy"
-            },
-            "educationalLevel": "Level 3",
-            "timeRequired": "PT360H",
-            "inLanguage": "en"
-          },
-          {
-            "@type": "Course",
-            "name": "Home-Based Personal Care Worker",
-            "description": "Training in providing personal care services in home settings for elderly and disabled care",
-            "provider": {
-              "@type": "EducationalOrganization",
-              "name": "Mitchellsplain Skills & Training Academy"
-            },
-            "educationalLevel": "Level 3",
-            "timeRequired": "PT360H",
-            "inLanguage": "en"
-          }
-        ]
-      },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "150",
-          "bestRating": "5",
-          "worstRating": "1"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "@id": "https://mitchellsplainskills.co.za/#localbusiness",
-        "name": "Mitchellsplain Skills & Training Academy",
-        "image": "https://images.pexels.com/photos/7551667/pexels-photo-7551667.jpeg",
-        "description": "Leading healthcare training academy in Ndabeni, Cape Town. QCTO accredited courses for Social Auxiliary Work, Health Promotion, and Personal Care training.",
-        "url": "https://mitchellsplainskills.co.za/",
-        "telephone": "+27-76-156-4909",
-        "email": "mtplsa.academy@gmail.com",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Entrance 1, Second Floor, Netclinic Ndabeni, Sunrise Building, 55 Morningside St",
-          "addressLocality": "Ndabeni",
-          "addressRegion": "Western Cape",
-          "postalCode": "7405",
-          "addressCountry": "ZA"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "-33.9249",
-          "longitude": "18.4951"
-        },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-            "opens": "08:00",
-            "closes": "17:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Saturday",
-            "opens": "09:00",
-            "closes": "14:00"
-          }
-        ],
-        "priceRange": "$$",
-        "paymentAccepted": ["Cash", "Card", "Bank Transfer"],
-        "currenciesAccepted": "ZAR",
-        "areaServed": [
-          {
-            "@type": "City",
-            "name": "Cape Town",
-            "sameAs": "https://en.wikipedia.org/wiki/Cape_Town"
-          },
-          {
-            "@type": "City",
-            "name": "Mitchells Plain"
-          },
-          {
-            "@type": "City",
-            "name": "Khayelitsha"
-          },
-          {
-            "@type": "City",
-            "name": "Bellville"
-          }
-        ],
-        "serviceType": ["Healthcare Training", "Medical Education", "QCTO Accredited Courses"],
-        "hasOfferCatalog": {
-          "@type": "OfferCatalog",
-          "name": "Healthcare Training Programs",
-          "itemListElement": [
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Social Auxiliary Work Training",
-                "description": "Level 5 QCTO accredited social work training program"
-              }
+              "@type": "Course",
+              "name": "Social Auxiliary Work",
+              "description": "Comprehensive training in social work principles, community development, and client support services",
+              "provider": {
+                "@type": "EducationalOrganization",
+                "name": "Mitchellsplain Skills & Training Academy"
+              },
+              "educationalLevel": "Level 5",
+              "timeRequired": "PT720H",
+              "inLanguage": "en"
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Health Promotion Officer Course",
-                "description": "Level 3 QCTO accredited health promotion training"
-              }
+              "@type": "Course",
+              "name": "Health Promotion Officer",
+              "description": "Training in health education, community health programs, and disease prevention",
+              "provider": {
+                "@type": "EducationalOrganization",
+                "name": "Mitchellsplain Skills & Training Academy"
+              },
+              "educationalLevel": "Level 3",
+              "timeRequired": "PT360H",
+              "inLanguage": "en"
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Personal Care Worker Training",
-                "description": "Level 3 QCTO accredited personal care training"
-              }
+              "@type": "Course",
+              "name": "Home-Based Personal Care Worker",
+              "description": "Training in providing personal care services in home settings for elderly and disabled care",
+              "provider": {
+                "@type": "EducationalOrganization",
+                "name": "Mitchellsplain Skills & Training Academy"
+              },
+              "educationalLevel": "Level 3",
+              "timeRequired": "PT360H",
+              "inLanguage": "en"
             }
           ]
         },
@@ -343,17 +238,18 @@
           "reviewCount": "150",
           "bestRating": "5",
           "worstRating": "1"
-        },
-        "sameAs": [
-          "https://wa.me/27761564909",
-          "https://www.google.com/maps/search/?api=1&query=Mitchellsplain+Skills+and+Training+Academy+Ndabeni+Cape+Town"
-        ]
+        }
       }
-    ]
     </script>
   </head>
   <body>
     <div id="root"></div>
+
+    <footer style="text-align:center; padding:12px 0; font-size:12px; opacity:.75;">
+      <a href="https://hcweb.co.za/" rel="noopener noreferrer" target="_blank">
+        Website by HC WEB
+      </a>
+    </footer>
     
     <!-- Hidden form for Netlify Forms detection -->
     <form name="contact" netlify netlify-honeypot="bot-field" hidden>
